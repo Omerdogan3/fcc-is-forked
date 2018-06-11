@@ -1,5 +1,6 @@
 {
   "name": "fcc-is-forked",
+  "description": "Fork of FreeCodeCamp",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
