@@ -26,6 +26,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to fcc-is-forked!');
+    console.log(compiled.querySelector('h1').textContent);
+    expect(compiled.querySelector('h1').textContent).toContain('Welcome to app');
   }));
 });

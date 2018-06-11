@@ -1,0 +1,31 @@
+// Amber Dark theme
+$amber-dark-primary: mat-palette($mat-amber);
+$amber-dark-accent:  mat-palette($mat-lime, A200, A100, A400);
+$amber-dark-warn:    mat-palette($mat-red);
+
+$amber-dark-theme:   mat-dark-theme($amber-dark-primary, $amber-dark-accent, $amber-dark-warn);
+
+.amber-dark {
+  @include angular-material-theme($amber-dark-theme);
+  .mat-color-accent {
+    color: mat-color($amber-dark-accent);
+  }
+  .mat-color-primary {
+    color: mat-color($amber-dark-primary);
+  }
+  .mat-color-primary-contrast {
+    color: #303030;
+  }
+  .mat-color-warn {
+    color: mat-color($amber-dark-warn);
+  }
+  .mat-background-accent {
+    background: mat-color($amber-dark-accent);
+  }
+  .mat-background-primary {
+    background: mat-color($amber-dark-primary);
+  }
+  .mat-background-warn {
+    background: mat-color($amber-dark-warn);
+  }
+}

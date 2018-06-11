@@ -1,0 +1,52 @@
+<div class="Map">
+  <header class="Map__header  mat-background-primary mat-color-primary-contrast">
+    <h1 class="md-h1">Welcome to the curriculum</h1>
+    <p class="attribution md-p">
+      While this platform was created through independent effort. The original curriculum was created through the efforts of thousands
+      of contributors at
+      <a href="https://learn.freecodecamp.org">learn.freecodecamp.org</a>.
+    </p>
+  </header>
+  <main class="Map__content">
+    <div class="Map__challenges">
+      <div class="Map__actions">
+        <button class="mat-raised-button mat-primary" color="primary">Expand all</button>
+        <button class="mat-raised-button mat-primary" color="primary">Collapse all</button>
+      </div>
+      <mat-accordion>
+        <mat-expansion-panel *ngFor="let section of hierarchy">
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              {{section.name}}
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <mat-accordion>
+            <mat-expansion-panel *ngFor="let subsection of section.blocks">
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                  {{subsection.name}}
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+              <mat-nav-list>
+                <a mat-list-item (click)="goToChallenge(challenge.id)" *ngFor="let challenge of subsection.challenges"> {{ challenge.name }} </a>
+              </mat-nav-list>
+            </mat-expansion-panel>
+          </mat-accordion>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <!--
+      <div class="Map__section" *ngFor="let section of hierarchy">
+        <h2 class="md-h2">{{section.name}}</h2>
+        <div class="Map__subsection" *ngFor="let subsection of section.blocks">
+          <h3 class="md-h3">{{subsection.name}}</h3>
+          <mat-nav-list>
+            <a mat-list-item (click)="goToChallenge(challenge.id)" *ngFor="let challenge of subsection.challenges"> {{ challenge.name }} </a>
+          </mat-nav-list>
+        </div>
+      </div>
+-->
+
+    </div>
+  </main>
+
+</div>

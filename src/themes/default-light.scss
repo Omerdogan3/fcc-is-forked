@@ -1,0 +1,56 @@
+// Default colors
+$default-light-primary: mat-palette($mat-teal, 700, 100, 800);
+$default-light-accent: mat-palette($mat-teal, 700, 100, 800);
+$default-light-warn: mat-palette($mat-red);
+
+$default-light: mat-light-theme(
+  $default-light-primary,
+  $default-light-accent,
+  $default-light-warn
+);
+@include angular-material-theme($default-light);
+.mat-color-accent {
+  color: mat-color($default-light-accent);
+}
+.mat-color-primary {
+  color: mat-color($default-light-primary);
+}
+.mat-color-primary-contrast {
+  color: #ffffff;
+}
+.mat-color-warn {
+  color: mat-color($default-light-warn);
+}
+.mat-background-accent {
+  background: mat-color($default-light-accent);
+}
+.mat-background-primary {
+  background: mat-color($default-light-primary);
+}
+.mat-background-warn {
+  background: mat-color($default-light-warn);
+}
+.default-light {
+  @include angular-material-theme($default-light);
+  .mat-color-accent {
+    color: mat-color($default-light-accent);
+  }
+  .mat-color-primary {
+    color: mat-color($default-light-primary);
+  }
+  .mat-color-primary-contrast {
+    color: #ffffff;
+  }
+  .mat-color-warn {
+    color: mat-color($default-light-warn);
+  }
+  .mat-background-accent {
+    background: mat-color($default-light-accent);
+  }
+  .mat-background-primary {
+    background: mat-color($default-light-primary);
+  }
+  .mat-background-warn {
+    background: mat-color($default-light-warn);
+  }
+}
