@@ -2,9 +2,13 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto 1fr;
-    height: 100vh;
+    height: 100%;
+
+    min-height: 100vh;
+    min-width: 100vw;
     &__toolbar {
         position: relative;
+        height: 70px;
     }
     &__navbar{
         width: 100%;
@@ -13,5 +17,8 @@
         .flex-spacer {
             flex-grow: 1;
         }
+    }
+    &__content {
+        min-width: 100vw;
     }
 }

@@ -1,5 +1,9 @@
 .Map {
+    width: 100vw;
     &__header, &__content {
         padding: 40px;
+    }
+    &__challenges {
+        max-width: 90vw;
     }
 }
