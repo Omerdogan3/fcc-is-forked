@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - "9"
+  - "10.3.0"
 dist: trusty
 sudo: false
 
@@ -12,12 +12,9 @@ cache:
   directories:
     - node_modules
 
-install:
-  - npm install -g yarn
-
 script:
-  - yarn lint
-  - yarn build --base-href https://p1xt.github.io/fcc-is-forked/
+  - npm run lint
+  - npm run build --base-href https://p1xt.github.io/fcc-is-forked/
 deploy:
   provider: pages
   skip_cleanup: true
