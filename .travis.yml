@@ -14,7 +14,7 @@ cache:
 
 script:
   - npm run lint
-  - npm run build --base-href https://p1xt.github.io/fcc-is-forked/
+  - npm run build:gh-pages
 deploy:
   provider: pages
   skip_cleanup: true

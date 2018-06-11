@@ -6,6 +6,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:gh-pages": "ng build --prod --base-href 'https://p1xt.github.io/fcc-is-forked/'",
     "test": "jest",
     "test:watch": "jest --watch",
     "test:ci": "jest --runInBand",
